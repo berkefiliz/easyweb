@@ -1,0 +1,3 @@
+# Easy Web
+
+This repository hosts the code for my website "Easy Web" which aims to teach web design basics without any complicated terminology. This README will be updated as the development progresses.
