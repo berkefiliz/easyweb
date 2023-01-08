@@ -15,66 +15,11 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    background-color: #2d3032;
-    font-size: 2rem;
-    color: white;
-    border-radius: 1em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 1rem;
-}
-
-header,
 nav,
 #content {
     margin: 0 auto;
     max-width: 76rem;
     padding: 2rem;
-}
-
-#search {
-    flex: 0.8;
-    max-width: 30rem;
-    display: flex;
-}
-#search > i {
-    padding: 0.5rem;
-}
-#search > input {
-    flex: 1;
-    border: none;
-    padding: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-#search > input:focus {
-    outline: 1px solid #666;
-}
-#search > button {
-    border: none;
-    padding: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    cursor: pointer;
-    margin-left: 0.5rem;
-}
-
-#login,
-#login > * {
-    transition: color 0.1s ease-in-out;
-    cursor: pointer;
-}
-#login > i {
-    color: #2d3032;
-    padding: 0.5rem;
-}
-#login:hover,
-#login:hover > i {
-    color: #555759;
 }
 
 #intro {
@@ -83,15 +28,19 @@ nav,
     margin-bottom: 4rem;
     padding: 3rem 10rem;
     line-height: 2.5rem;
-    background-color: rgb(210, 230, 255);
+    color: #2d3032;
+    background-color: rgb(205, 226, 255);
     border-radius: 3rem;
-    outline: 2px solid rgb(128, 183, 255);
+    outline: 2px solid rgb(171, 206, 253);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#intro > p {
+    opacity: 0.8;
 }
 
 #register {
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     font-size: 1.2rem;
     background-color: rgb(128, 183, 255);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -99,8 +48,8 @@ nav,
     margin-left: 0.5rem;
     border-radius: 3rem;
     transition: padding 0.1s ease-in-out, letter-spacing 0.1s ease-in-out;
+    letter-spacing: 0.1rem;
 }
-
 #register:hover {
     filter: saturate(150%);
     padding: 1rem 5rem;
@@ -177,7 +126,6 @@ h2 {
         margin-top: 0;
     }
 
-    header,
     nav,
     #content {
         max-width: 100vw;

@@ -9,24 +9,11 @@
         />
     </head>
     <body>
-        <header>
-            <p style="margin: 0">Easy Web</p>
-        </header>
-        <nav>
-            <div id="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search">
-                <button>Go</button>
-            </div>
-            <div id="login">
-                <i class="fa-solid fa-user"></i>
-                <span>Login</span>
-            </div>
-        </nav>
+        <?php include "./sharedhtml/header.html"; ?>
         <div id="content">
             <div id="intro">
-                <p>Want to learn web design but don't know where to start?</p>
-                <button id="register">Register</button>
+                <p>Learn the very basics of web design without the complicated vocabulary!</p>
+                <button id="register">Start now</button>
             </div>
         </div>
     </body>

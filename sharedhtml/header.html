@@ -1,0 +1,84 @@
+<style>
+    header {
+        background-color: #2d3032;
+        font-size: 2rem;
+        color: white;
+        border-radius: 1em;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        margin: 0 auto;
+        max-width: 76rem;
+        padding: 2rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+
+    #search {
+        flex: 0.8;
+        max-width: 30rem;
+        display: flex;
+    }
+    #search > i {
+        padding: 0.5rem;
+    }
+    #search > input {
+        flex: 1;
+        border: none;
+        padding: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    #search > input:focus {
+        outline: 1px solid #666;
+    }
+    #search > button {
+        border: none;
+        padding: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        cursor: pointer;
+        margin-left: 0.5rem;
+    }
+
+    #login,
+    #login > * {
+        transition: color 0.1s ease-in-out;
+        cursor: pointer;
+    }
+    #login > i {
+        color: #2d3032;
+        padding: 0.5rem;
+    }
+    #login:hover,
+    #login:hover > i {
+        color: #555759;
+    }
+
+    @media screen and (max-width: 80rem) {
+        header {
+            max-width: 100vw;
+            padding: 1.5rem;
+            border-radius: 0;
+        }
+    }
+</style>
+
+<header>
+    <p style="margin: 0">Easy Web</p>
+</header>
+<nav>
+    <div id="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search" />
+        <button>Go</button>
+    </div>
+    <div id="login">
+        <i class="fa-solid fa-user"></i>
+        <span>Login</span>
+    </div>
+</nav>
