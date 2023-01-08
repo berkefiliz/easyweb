@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html onmouseover="">
     <head>
         <title>Easy Web: Register</title>
         <link rel="stylesheet" href="styles/styles.css" />
@@ -25,7 +25,7 @@
                         div.innerHTML = "Confirm your password by retyping it.<br>Passwords in both fields should match.";
                         break;
                     case "register":
-                        div.innerHTML = "Ready?<br>You can always change your title and password!";
+                        div.innerHTML = "Ready to start?<br>You can always change your title and password!";
                         break;
                 }
             }
@@ -51,7 +51,6 @@
                             placeholder="Username*"
                             tabindex="1"
                             onfocus="focusText('username')"
-                            onmouseover="focusText('username')"
                             required
                         />
                     </div>
@@ -63,7 +62,6 @@
                             name="title"
                             placeholder="Title / Profession"
                             onfocus="focusText('title')"
-                            onmouseover="focusText('title')"
                             tabindex="2"
                         />
                     </div>
@@ -75,7 +73,6 @@
                             name="password"
                             placeholder="Password*"
                             onfocus="focusText('password')"
-                            onmouseover="focusText('password')"
                             tabindex="3"
                             required
                         />
@@ -88,7 +85,6 @@
                             name="password2"
                             placeholder="Confirm password*"
                             onfocus="focusText('password2')"
-                            onmouseover="focusText('password2')"
                             tabindex="4"
                             required
                         />
@@ -129,6 +125,18 @@
             switch(error) {
                 case "password_match":
                     errortext = "Passwords do not match!"
+                    break;
+                case "password_length":
+                    errortext = "The password must be between 8 and 50 characters long!"
+                    break;
+                case "password_alpha":
+                    errortext = "The password must only contain letters and numbers!"
+                    break;
+                case "username_length":
+                    errortext = "The username must be between 3 and 30 characters long!"
+                    break;
+                case "username_alpha":
+                    errortext = "The username must only contain letters and numbers!"
                     break;
             }
             errordiv.style.display = "block";
