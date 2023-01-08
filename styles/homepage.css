@@ -5,9 +5,9 @@
     padding: 1rem 10rem;
     line-height: 2.5rem;
     color: #2d3032;
-    background-color: rgb(205, 226, 255);
+    background-color: #cde2ff;
     border-radius: 3rem;
-    outline: 2px solid rgb(171, 206, 253);
+    outline: 2px solid #abcefd;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 #intro > p {
@@ -18,7 +18,7 @@
     border: none;
     padding: 1rem 3rem;
     font-size: 1.2rem;
-    background-color: rgb(128, 183, 255);
+    background-color: #80b7ff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     cursor: pointer;
     margin-left: 0.5rem;

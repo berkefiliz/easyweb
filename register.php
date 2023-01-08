@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html onmouseover="">
+<html>
     <head>
         <title>Easy Web: Register</title>
         <link rel="stylesheet" href="styles/styles.css" />
@@ -11,21 +11,26 @@
         <script>
             function focusText(id) {
                 let div = document.getElementById("focus-desc");
-                switch(id) {
+                switch (id) {
                     case "username":
-                        div.innerHTML = "Your username is unique to you.<br>It must be between 3 and 30 characters long.";
+                        div.innerHTML =
+                            "Your username is unique to you.<br>It must be between 3 and 30 characters long.";
                         break;
                     case "title":
-                        div.innerHTML = "Optional. Your title could be your job, or anything similar.<br>Or just put the name of your favourite Pokemon!";
+                        div.innerHTML =
+                            "Optional. Your title could be your job, or anything similar.<br>Or just put the name of your favourite Pokemon!";
                         break;
                     case "password":
-                        div.innerHTML = "Your password needs to be between 8 and 50 characters.<br>Use letters or numbers only.<br>Do not share your password with anyone!";
+                        div.innerHTML =
+                            "Your password needs to be between 8 and 50 characters.<br>Use letters or numbers only.<br>Do not share your password with anyone!";
                         break;
                     case "password2":
-                        div.innerHTML = "Confirm your password by retyping it.<br>Passwords in both fields should match.";
+                        div.innerHTML =
+                            "Confirm your password by retyping it.<br>Passwords in both fields should match.";
                         break;
                     case "register":
-                        div.innerHTML = "Ready to start?<br>You can always change your title and password!";
+                        div.innerHTML =
+                            "Ready to start?<br>You can always change your title and password!";
                         break;
                 }
             }
@@ -90,7 +95,7 @@
                         />
                     </div>
                 </div>
-                <input type="hidden" value="" />
+                <input id="secret" type="hidden" name="secret"  />
                 <div id="button-wrapper">
                     <button
                         id="goback"
@@ -121,29 +126,49 @@
             let error = url.split("?error=")[1];
             let errordiv = document.getElementById("error");
             let errortext = "Unknown error";
-            console.log(error)
-            switch(error) {
+            switch (error) {
                 case "password_match":
-                    errortext = "Passwords do not match!"
+                    errortext = "Passwords do not match!";
                     break;
                 case "password_length":
-                    errortext = "The password must be between 8 and 50 characters long!"
+                    errortext =
+                        "The password must be between 8 and 50 characters long!";
                     break;
                 case "password_alpha":
-                    errortext = "The password must only contain letters and numbers!"
+                    errortext =
+                        "The password must only contain letters and numbers!";
                     break;
                 case "username_length":
-                    errortext = "The username must be between 3 and 30 characters long!"
+                    errortext =
+                        "The username must be between 3 and 30 characters long!";
                     break;
                 case "username_alpha":
-                    errortext = "The username must only contain letters and numbers!"
+                    errortext =
+                        "The username must only contain letters and numbers!";
                     break;
                 case "username_exists":
-                    errortext = "This username is already taken!"
+                    errortext = "This username is already taken!";
+                    break;
+                default:
+                    errortext = "Something went wrong, please try again!";
                     break;
             }
             errordiv.style.display = "block";
             errordiv.innerHTML = errortext;
         }
+
+        let secret = "";
+        let characters =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let charactersLength = characters.length;
+        for (var i = 0; i < 30; i++) {
+            secret += characters.charAt(
+                Math.floor(Math.random() * charactersLength)
+            );
+        }
+
+        let secretform = document.getElementById("secret");
+        secretform.value = secret;
+        secret = null;
     </script>
 </html>
