@@ -138,6 +138,9 @@
                 case "username_alpha":
                     errortext = "The username must only contain letters and numbers!"
                     break;
+                case "username_exists":
+                    errortext = "This username is already taken!"
+                    break;
             }
             errordiv.style.display = "block";
             errordiv.innerHTML = errortext;
