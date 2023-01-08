@@ -13,7 +13,11 @@
             <p style="margin: 0">Easy Web</p>
         </header>
         <nav>
-            <div>Search bar here</div>
+            <div id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+                <button>Go!</button>
+            </div>
             <div id="login">
                 <i class="fa-solid fa-user"></i>
                 <span>Login</span>
