@@ -37,6 +37,14 @@ nav,
     padding: 2rem;
 }
 
+#intro {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 10rem;
+    line-height: 2.5rem;;
+}
+
 /* The list */
 
 .item {
@@ -76,7 +84,7 @@ nav,
 
 .item:hover {
     background-color: #e5ffe9;
-    outline: 3px solid #2d3032;
+    outline: 3px solid #666;
 }
 .item:hover > .img-wrapper > img {
     transform: rotate(-8deg);
@@ -86,13 +94,17 @@ nav,
 
 h2 {
     text-align: center;
+    color: #7d7f80;
     background-color: #d3d3d3;
     padding: 0.8rem;
     border-radius: 3rem;
-    margin: 2rem 20%;
+    margin: 4rem 20%;
+    margin-bottom: 2rem;
+    letter-spacing: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-#section-001 {
+#section-1 {
     margin-top: 0 !important;
 }
 
@@ -112,10 +124,11 @@ h2 {
     }
 
     h2 {
-        color: #2d3032;
         margin: 2rem 0;
         border-radius: 0.5rem;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    #intro {
+        padding: 0 2rem;
     }
 }
