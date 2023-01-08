@@ -1,11 +1,19 @@
 <style>
     header {
         background-color: #2d3032;
-        font-size: 2rem;
-        color: white;
         border-radius: 1em;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
             rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    header > a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+    }
+
+    header,
+    nav {
         margin: 0 auto;
         max-width: 76rem;
         padding: 2rem;
@@ -60,7 +68,8 @@
     }
 
     @media screen and (max-width: 80rem) {
-        header {
+        header,
+        nav {
             max-width: 100vw;
             padding: 1.5rem;
             border-radius: 0;
@@ -69,7 +78,7 @@
 </style>
 
 <header>
-    <p style="margin: 0">Easy Web</p>
+    <a style="margin: 0" href="/">Easy Web</a>
 </header>
 <nav>
     <div id="search">

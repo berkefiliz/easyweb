@@ -1,27 +1,3 @@
-/* black #2d3032 #555759 #d3d3d3 highlight #9615db accent #7d7f80 */
-
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-
-/* Website setup */
-
-* {
-    font-family: "Ubuntu";
-}
-
-body {
-    margin: 0;
-    margin-top: 1rem;
-    background-color: #eee;
-    overflow-x: hidden;
-}
-
-nav,
-#content {
-    margin: 0 auto;
-    max-width: 76rem;
-    padding: 2rem;
-}
-
 #intro {
     font-size: 1.6rem;
     text-align: center;
@@ -101,43 +77,9 @@ nav,
     transform: rotate(-8deg);
 }
 
-/* Dividers */
-
-h2 {
-    text-align: center;
-    color: #7d7f80;
-    background-color: #d3d3d3;
-    padding: 0.8rem;
-    border-radius: 3rem;
-    margin: 4rem 20%;
-    margin-bottom: 2rem;
-    letter-spacing: 0.4rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-#section-1 {
-    margin-top: 0 !important;
-}
-
 /* Small screens */
 
 @media screen and (max-width: 80rem) {
-    body {
-        margin-top: 0;
-    }
-
-    nav,
-    #content {
-        max-width: 100vw;
-        padding: 1.5rem;
-        border-radius: 0;
-    }
-
-    h2 {
-        margin: 2rem 0;
-        border-radius: 0.5rem;
-    }
-
     #intro {
         padding: 2rem;
     }

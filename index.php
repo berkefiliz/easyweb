@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Easy Web</title>
+        <link rel="stylesheet" href="styles/styles.css" />
         <link rel="stylesheet" href="styles/homepage.css" />
         <link
             rel="stylesheet"
@@ -13,7 +14,7 @@
         <div id="content">
             <div id="intro">
                 <p>Learn the very basics of web design without the complicated vocabulary!</p>
-                <button id="register">Start now</button>
+                <button id="register" onclick="window.location = '/register.php'">Start now</button>
             </div>
         </div>
     </body>
@@ -45,15 +46,3 @@
         });
     });
 </script>
-
-<!--
-<div class="item">
-            <div class="img-wrapper">
-                <img src="./thumbnails/${section.image}.png" />
-            </div>
-            <div class="desc-wrapper">
-                <p class="name">What is web design?</p>
-                <p class="desc">Is it a bird? A plane???</p>
-            </div>
-        </div>
--->
