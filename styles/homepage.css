@@ -81,8 +81,30 @@ nav,
     font-size: 1.6rem;
     text-align: center;
     margin-bottom: 4rem;
-    padding: 0 10rem;
+    padding: 3rem 10rem;
     line-height: 2.5rem;
+    background-color: rgb(210, 230, 255);
+    border-radius: 3rem;
+    outline: 2px solid rgb(128, 183, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#register {
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: rgb(128, 183, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    border-radius: 3rem;
+    transition: padding 0.1s ease-in-out, letter-spacing 0.1s ease-in-out;
+}
+
+#register:hover {
+    filter: saturate(150%);
+    padding: 1rem 5rem;
+    letter-spacing: 0.2rem;
 }
 
 /* The list */
@@ -169,6 +191,6 @@ h2 {
     }
 
     #intro {
-        padding: 0 2rem;
+        padding: 2rem;
     }
 }

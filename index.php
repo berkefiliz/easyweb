@@ -16,7 +16,7 @@
             <div id="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Search">
-                <button>Go!</button>
+                <button>Go</button>
             </div>
             <div id="login">
                 <i class="fa-solid fa-user"></i>
@@ -24,7 +24,10 @@
             </div>
         </nav>
         <div id="content">
-            <div id="intro">.</div>
+            <div id="intro">
+                <p>Want to learn web design but don't know where to start?</p>
+                <button id="register">Register</button>
+            </div>
         </div>
     </body>
 </html>
