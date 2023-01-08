@@ -13,8 +13,10 @@
         <?php include "./sharedhtml/header.html"; ?>
         <div id="content">
             <div id="intro">
-                <p>Learn the very basics of web design without the complicated vocabulary!</p>
-                <button id="register" onclick="window.location = '/register.php'">Start now</button>
+                <p>
+                    Learn the very basics of web design without the complicated vocabulary!
+                </p>
+                <button id="register" onclick="window.location = '/register.php'">Register now</button>
             </div>
         </div>
     </body>

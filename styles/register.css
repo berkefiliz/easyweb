@@ -53,6 +53,27 @@
     letter-spacing: 0.2rem;
 }
 
+#error {
+    display: none;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 1rem 10rem;
+    line-height: 2.5rem;
+    color: #2d3032;
+    background-color: #f8c4c4;
+    border-radius: 3rem;
+    outline: 2px solid #fcb3b3;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#focus-desc {
+    text-align: center;
+    margin-top: 2rem;
+    color: #7d7f80;
+    line-height: 1.6rem;
+}
+
 @media screen and (max-width: 80rem) {
     .form-grid {
         width: 90%;
