@@ -29,7 +29,6 @@
 }
 
 #button-wrapper {
-    background-color: white;
     display: flex;
     justify-content: center;
     gap: 2rem;

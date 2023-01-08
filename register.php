@@ -15,7 +15,7 @@
             <form
                 id="register-form"
                 method="post"
-                action="../actions/comment.php"
+                action="./serverfunctions/registerUser.php"
             >
                 <h2>Details</h2>
                 <div class="form-grid">
