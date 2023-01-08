@@ -3,6 +3,10 @@
     <head>
         <title>Easy Web</title>
         <link rel="stylesheet" href="styles/homepage.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
     </head>
     <body>
         <header>
@@ -10,10 +14,13 @@
         </header>
         <nav>
             <div>Search bar here</div>
-            <div style="text-align: right">Buttons here</div>
+            <div id="login">
+                <i class="fa-solid fa-user"></i>
+                <span>Login</span>
+            </div>
         </nav>
         <div id="content">
-            <div id="intro">Intro text here</div>
+            <div id="intro">.</div>
         </div>
     </body>
 </html>

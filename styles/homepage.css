@@ -27,6 +27,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 1rem;
 }
 
 header,
@@ -35,6 +36,18 @@ nav,
     margin: 0 auto;
     max-width: 76rem;
     padding: 2rem;
+}
+
+#login, #login > * {
+    transition: color 0.1s ease-in-out;
+    cursor: pointer;
+}
+#login > i {
+    color: #2d3032;
+    margin-right: 0.4rem;
+}
+#login:hover, #login:hover > i{
+    color: #555759;
 }
 
 #intro {
