@@ -1,0 +1,64 @@
+.form-grid > div {
+    display: flex;
+}
+
+.form-grid > div > i {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #555759;
+}
+
+.form-grid > div > input {
+    flex: 1;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    min-width: 0;
+    width: calc(100% - 2rem);
+}
+.form-grid > div > input:focus {
+    outline: 1px solid #666;
+}
+
+.form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
+    grid-gap: 2rem;
+}
+
+#button-wrapper {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#button-wrapper > button {
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    background-color: rgb(128, 183, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+    border-radius: 3rem;
+    transition: padding 0.1s ease-in-out, letter-spacing 0.1s ease-in-out,
+        filter 0.1s ease-in-out;
+    letter-spacing: 0.1rem;
+    margin-top: 3rem;
+}
+#button-wrapper > button:hover {
+    filter: brightness(105%);
+    padding: 1rem 5rem;
+    letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 80rem) {
+    .form-grid {
+        width: 90%;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        margin: auto;
+    }
+}

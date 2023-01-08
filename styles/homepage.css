@@ -23,11 +23,12 @@
     cursor: pointer;
     margin-left: 0.5rem;
     border-radius: 3rem;
-    transition: padding 0.1s ease-in-out, letter-spacing 0.1s ease-in-out;
+    transition: padding 0.1s ease-in-out, letter-spacing 0.1s ease-in-out,
+        filter 0.1s ease-in-out;
     letter-spacing: 0.1rem;
 }
 #register:hover {
-    filter: saturate(150%);
+    filter: brightness(105%);
     padding: 1rem 5rem;
     letter-spacing: 0.2rem;
 }
