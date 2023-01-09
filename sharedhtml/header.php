@@ -90,7 +90,7 @@
     </div>
     <?php
         if (isset($logged)) {
-            $target =  "./serverfunctions/logoutuser.php";
+            $target =  "./serverfunctions/logoutUser.php";
         } else {
             $target =  "./login.php";
         }
