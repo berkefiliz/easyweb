@@ -37,7 +37,7 @@
         </script>
     </head>
     <body>
-        <?php include "./sharedhtml/header.html"; ?>
+        <?php include "./sharedhtml/header.php"; ?>
         <div id="content">
             <div id="error"></div>
             <form

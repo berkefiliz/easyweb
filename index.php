@@ -10,14 +10,28 @@
         />
     </head>
     <body>
-        <?php include "./sharedhtml/header.html"; ?>
+        <?php include "./sharedhtml/header.php"; ?>
         <div id="content">
-            <div id="intro">
-                <p>
-                    Learn the very basics of web design without the complicated vocabulary!
-                </p>
-                <button id="register" onclick="window.location = '/register.php'">Register now</button>
-            </div>
+            <?php
+                if (isset($logged)) {
+                    echo "
+                        <div id='intro'>
+                            <p>
+                                Welcome, $logged!
+                            </p>
+                        </div>
+                    ";
+                } else {
+                    echo "
+                        <div id='intro'>
+                            <p>
+                                Learn the very basics of web design without the complicated vocabulary!
+                            </p>
+                            <button id='register' onclick=\"window.location = '/register.php'\">Register now</button>
+                        </div>
+                    ";
+                }
+            ?>
         </div>
     </body>
 </html>

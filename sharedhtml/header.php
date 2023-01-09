@@ -1,3 +1,5 @@
+<?php include "./serverfunctions/logincheck.php"; ?>
+
 <style>
     header {
         background-color: #2d3032;
@@ -86,8 +88,15 @@
         <input type="text" placeholder="Search" />
         <button>Go</button>
     </div>
-    <div id="login">
+    <?php
+        if (isset($logged)) {
+            $target =  "./serverfunctions/logoutuser.php";
+        } else {
+            $target =  "./login.php";
+        }
+    ?>
+    <div id="login" onclick="window.location = '<?php echo $target; ?>'">
         <i class="fa-solid fa-user"></i>
-        <span>Login</span>
+        <span><?php if (isset($logged)) {echo "Logout";} else {echo "Login";}?></span>
     </div>
 </nav>
