@@ -65,8 +65,8 @@ include "./serverfunctions/loginCheck.php";
 <nav>
     <div class="nav-buttons">
         <a href="/"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="/"><i class="fa-solid fa-book"></i> Resources</a>
-        <a href="/"><i class="fa-solid fa-at"></i> Contact</a>
+        <a href="/resources.php"><i class="fa-solid fa-book"></i> Resources</a>
+        <a href="/contact.php"><i class="fa-solid fa-at"></i> Contact</a>
         <a href="https://github.com/berkefiliz/easyweb" target="_blank"
             ><i class="fa-solid fa-code"></i> Source</a
         >

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Easy Web: Contact</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/homepage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <?php include "./components/header.php"; ?>
+    <div id="content">
+        <div id='welcome' class='info'>
+            <h3>Contact</h3>
+            <p>Here will be my contact details and a contact form.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

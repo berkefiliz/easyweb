@@ -16,9 +16,9 @@
                 if (isset($logged)) {
                     echo "
                         <div id='welcome' class='info'>
-                            <p>
-                                Welcome, $logged!
-                            </p>
+                            <h3>Welcome!</h3>
+                            <p>Currently logged in as user @$logged!</p>
+                            <p>Soon here will be a progress bar!</p>
                         </div>
                     ";
                 } else {
