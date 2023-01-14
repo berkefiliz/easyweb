@@ -47,13 +47,14 @@
                     <button
                         id="goback"
                         type="reset"
-                        style="background-color: #d3d3d3"
+                        class="button-lg button-outline"
                         onclick="window.location = '/index.php'"
                     >
                         Go back
                     </button>
                     <button
                         id="register"
+                        class="button-lg"
                         type="submit"
                         tabindex="3"
                     >

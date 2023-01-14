@@ -1,22 +1,3 @@
-.button-lg {
-    border: none;
-    padding: 0.6rem 2rem;
-    font-size: 1rem;
-    background-color: #2d3032;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    cursor: pointer;
-    margin-left: 0.5rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.1s ease-in-out;
-    letter-spacing: 0.1rem;
-    margin: 0;
-}
-
-.button-lg:hover, #login:hover {
-    background-color: #2d97cb;
-}
-
 #welcome {
     border-left: 1rem solid #2d3032;
     text-align: left;
@@ -25,7 +6,6 @@
 
 #login {
     margin-left: 1rem;
-    background-color: #adadad;
 }
 
 /* The list */

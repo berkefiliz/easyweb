@@ -45,10 +45,7 @@
                 method="post"
                 action="./serverfunctions/registerUser.php"
             >
-                <div class="info">
-                    <h3><i class="fa-solid fa-id-card"></i> Register</h3>
-                    <p>One step closer!</p>
-                </div>
+                <h2>Register</h2>
                 <div class="form-grid">
                     <div>
                         <i class="fa-solid fa-user"></i>
@@ -102,14 +99,15 @@
                 <div id="button-wrapper">
                     <button
                         id="goback"
+                        class="button-lg button-outline"
                         type="reset"
-                        style="background-color: #d3d3d3"
                         onclick="window.location = '/index.php'"
                     >
                         Go back
                     </button>
                     <button
                         id="register"
+                        class="button-lg"
                         type="submit"
                         tabindex="5"
                         onfocus="focusText('register')"

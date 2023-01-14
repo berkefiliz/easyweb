@@ -33,7 +33,7 @@
                             </ul>
                             <br>
                             <button id='register' class='button-lg' onclick=\"window.location = '/register.php'\">Register now</button>
-                            <button id='login' class='button-lg' onclick=\"window.location = '/login.php'\">Login</button>
+                            <button id='login' class='button-lg button-outline' onclick=\"window.location = '/login.php'\">Login</button>
                         </div>
                     ";
                 }

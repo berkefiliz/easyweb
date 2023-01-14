@@ -22,36 +22,19 @@
 }
 
 .form-grid {
-    width: 100%;
+    width: 50%;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 1rem;
 }
 
 #button-wrapper {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-}
-
-#button-wrapper > button {
-    border: none;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-    background-color: rgb(128, 183, 255);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    cursor: pointer;
-    border-radius: 3rem;
-    transition: padding 0.1s ease-in-out, letter-spacing 0.1s ease-in-out,
-        filter 0.1s ease-in-out;
-    letter-spacing: 0.1rem;
+    gap: 1rem;
     margin-top: 3rem;
 }
-#button-wrapper > button:hover {
-    filter: brightness(105%);
-    padding: 1rem 5rem;
-    letter-spacing: 0.2rem;
-}
+
 
 #error {
     display: none;
@@ -69,9 +52,7 @@
 
 @media screen and (max-width: 80rem) {
     .form-grid {
-        width: 90%;
+        width: 80%;
         grid-gap: 1rem;
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-        margin: auto;
     }
 }
