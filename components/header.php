@@ -67,13 +67,17 @@ include "./serverfunctions/loginCheck.php";
         <a href="/"><i class="fa-solid fa-house"></i> Home</a>
         <a href="/"><i class="fa-solid fa-book"></i> Resources</a>
         <a href="/"><i class="fa-solid fa-at"></i> Contact</a>
-    </div>
-    <div class="nav-buttons">
         <a href="https://github.com/berkefiliz/easyweb" target="_blank"
             ><i class="fa-solid fa-code"></i> Source</a
         >
-        <a href="/serverfunctions/logoutUser.php"
-            ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
-        >
+    </div>
+    <div class="nav-buttons">
+        <?php
+            if (isset($_SESSION["secret"]) && $_SESSION["secret"]) {
+                echo '<a href="/serverfunctions/logoutUser.php"
+                    ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+                >';
+            };
+        ?>
     </div>
 </nav>
