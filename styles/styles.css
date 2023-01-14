@@ -68,6 +68,11 @@ h2 {
     margin-bottom: 2rem;
     letter-spacing: 0.4rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-size: 1.5rem;
+}
+
+h2:first-of-type {
+    margin-top: 0;
 }
 
 
@@ -90,16 +95,15 @@ h2 {
 }
 .info > p {
     opacity: 0.9;
+    font-size: 1.2rem;
 }
 .info > ul {
+    margin-top: 0.5rem;
     opacity: 0.7;
+    font-size: 1.2rem;
 }
 .info > h3 {
     font-size: 2rem;
-}
-.info > img {
-    height: 10rem;
-    width: 10rem;
 }
 
 /* Small screens */
