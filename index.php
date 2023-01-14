@@ -10,12 +10,12 @@
         />
     </head>
     <body>
-        <?php include "./sharedhtml/header.php"; ?>
+        <?php include "./components/header.php"; ?>
         <div id="content">
             <?php
                 if (isset($logged)) {
                     echo "
-                        <div id='intro'>
+                        <div class='info'>
                             <p>
                                 Welcome, $logged!
                             </p>
@@ -23,10 +23,9 @@
                     ";
                 } else {
                     echo "
-                        <div id='intro'>
-                            <p>
-                                Learn the very basics of web design without the complicated vocabulary!
-                            </p>
+                        <div class='info'>
+                            <h3><i class='fa-solid fa-bolt'></i> Welcome</h3>
+                            <br>
                             <button id='register' onclick=\"window.location = '/register.php'\">Register now</button>
                         </div>
                     ";

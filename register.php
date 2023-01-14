@@ -3,7 +3,7 @@
     <head>
         <title>Easy Web: Register</title>
         <link rel="stylesheet" href="styles/styles.css" />
-        <link rel="stylesheet" href="styles/register.css" />
+        <link rel="stylesheet" href="styles/forms.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -37,15 +37,18 @@
         </script>
     </head>
     <body>
-        <?php include "./sharedhtml/header.php"; ?>
+        <?php include "./components/header.php"; ?>
         <div id="content">
-            <div id="error"></div>
+            <div class="info" id="error"></div>
             <form
                 id="register-form"
                 method="post"
                 action="./serverfunctions/registerUser.php"
             >
-                <h2>Register</h2>
+                <div class="info">
+                    <h3><i class="fa-solid fa-id-card"></i> Register</h3>
+                    <p>One step closer!</p>
+                </div>
                 <div class="form-grid">
                     <div>
                         <i class="fa-solid fa-user"></i>

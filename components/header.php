@@ -1,4 +1,7 @@
-<?php include "./serverfunctions/loginCheck.php"; ?>
+<?php
+    include "./serverfunctions/secrets.php";
+    include "./serverfunctions/loginCheck.php";
+?>
 
 <style>
     header {

@@ -3,16 +3,16 @@
     <head>
         <title>Easy Web: Login</title>
         <link rel="stylesheet" href="styles/styles.css" />
-        <link rel="stylesheet" href="styles/register.css" />
+        <link rel="stylesheet" href="styles/forms.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         />
     </head>
     <body>
-        <?php include "./sharedhtml/header.php"; ?>
+        <?php include "./components/header.php"; ?>
         <div id="content">
-            <div id="error"></div>
+            <div id="error" class="info"></div>
             <form
                 id="register-form"
                 method="post"
