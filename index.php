@@ -14,27 +14,27 @@
         <?php
         if (isset($logged)) {
             echo "
-                        <div id='welcome' class='info'>
-                            <h3>Welcome!</h3>
-                            <p>Currently logged in as user @$logged!</p>
-                            <p>Soon here will be a progress bar!</p>
-                        </div>
-                    ";
+                <div id='welcome' class='info'>
+                    <h3>Welcome!</h3>
+                    <p>Currently logged in as user @$logged!</p>
+                    <p>Soon here will be a progress bar!</p>
+                </div>
+            ";
         } else {
             echo "
-                        <div id='welcome' class='info'>
-                            <h3>Web design, simplified</h3>
-                            <p>Learn the very basics without difficult terminology.</p>
-                            <ul>
-                                <li>Read short, concise and interactive classes</li>
-                                <li>Join the discussion in the comments</li>
-                                <li>Track your progress</li>
-                            </ul>
-                            <br>
-                            <button id='register' class='button-lg' onclick=\"window.location = '/register.php'\">Register now</button>
-                            <button id='login' class='button-lg button-outline' onclick=\"window.location = '/login.php'\">Login</button>
-                        </div>
-                    ";
+                <div id='welcome' class='info'>
+                    <h3>Web design, simplified</h3>
+                    <p>Learn the very basics without difficult terminology.</p>
+                    <ul>
+                        <li>Read short, concise and interactive classes</li>
+                        <li>Join the discussion in the comments</li>
+                        <li>Track your progress</li>
+                    </ul>
+                    <br>
+                    <button id='register' class='button-lg' onclick=\"window.location = '/register.php'\">Register now</button>
+                    <button id='login' class='button-lg button-outline' onclick=\"window.location = '/login.php'\">Login</button>
+                </div>
+            ";
         }
         ?>
     </div>
@@ -75,7 +75,6 @@
             `
         });
         newcontent += "</div>";
-        console.log(newcontent)
         content.innerHTML += newcontent;
     });
 </script>
