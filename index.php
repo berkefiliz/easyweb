@@ -15,7 +15,7 @@
             <?php
                 if (isset($logged)) {
                     echo "
-                        <div class='info'>
+                        <div id='welcome' class='info'>
                             <p>
                                 Welcome, $logged!
                             </p>
@@ -23,10 +23,17 @@
                     ";
                 } else {
                     echo "
-                        <div class='info'>
-                            <h3><i class='fa-solid fa-bolt'></i> Welcome</h3>
+                        <div id='welcome' class='info'>
+                            <h3>Web design, simplified</h3>
+                            <p>Learn the very basics without difficult terminology.</p>
+                            <ul>
+                                <li>Read short, concise and interactive classes</li>
+                                <li>Join the discussion in the comments</li>
+                                <li>Track your progress</li>
+                            </ul>
                             <br>
-                            <button id='register' onclick=\"window.location = '/register.php'\">Register now</button>
+                            <button id='register' class='button-lg' onclick=\"window.location = '/register.php'\">Register now</button>
+                            <button id='login' class='button-lg' onclick=\"window.location = '/login.php'\">Login</button>
                         </div>
                     ";
                 }

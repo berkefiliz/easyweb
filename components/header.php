@@ -1,6 +1,6 @@
 <?php
-    include "./serverfunctions/secrets.php";
-    include "./serverfunctions/loginCheck.php";
+include "./serverfunctions/secrets.php";
+include "./serverfunctions/loginCheck.php";
 ?>
 
 <style>
@@ -31,14 +31,34 @@
         font-size: 1rem;
     }
 
+    #nav-buttons > a {
+        text-decoration: none;
+        color: #2d3032;
+        transition: color 0.1s ease-in-out;
+        display: block;
+        float: right;
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    #nav-buttons > a > i {
+        margin-right: 0.5rem;
+    }
+
+    #nav-buttons > a:hover {
+        color: #2d97cb;
+    }
+
     #search {
         flex: 0.8;
         max-width: 30rem;
         display: flex;
     }
+
     #search > i {
         padding: 0.5rem;
     }
+
     #search > input {
         flex: 1;
         border: none;
@@ -46,9 +66,11 @@
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
             rgba(0, 0, 0, 0.23) 0px 3px 6px;
     }
+
     #search > input:focus {
         outline: 1px solid #666;
     }
+
     #search > button {
         border: none;
         padding: 0.5rem;
@@ -56,20 +78,6 @@
             rgba(0, 0, 0, 0.23) 0px 3px 6px;
         cursor: pointer;
         margin-left: 0.5rem;
-    }
-
-    #login,
-    #login > * {
-        transition: color 0.1s ease-in-out;
-        cursor: pointer;
-    }
-    #login > i {
-        color: #2d3032;
-        padding: 0.5rem;
-    }
-    #login:hover,
-    #login:hover > i {
-        color: #555759;
     }
 
     @media screen and (max-width: 80rem) {
@@ -91,15 +99,12 @@
         <input type="text" placeholder="Search" />
         <button>Go</button>
     </div>
-    <?php
-        if (isset($logged)) {
-            $target =  "./serverfunctions/logoutUser.php";
-        } else {
-            $target =  "./login.php";
-        }
-    ?>
-    <div id="login" onclick="window.location = '<?php echo $target; ?>'">
-        <i class="fa-solid fa-user"></i>
-        <span><?php if (isset($logged)) {echo "Logout";} else {echo "Login";}?></span>
+    <div id="nav-buttons">
+        <a href="/serverfunctions/logoutUser.php"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+        >
+        <a href="https://github.com/berkefiliz/easyweb" , target="_blank"
+            ><i class="fa-solid fa-code"></i> Source</a
+        >
     </div>
 </nav>

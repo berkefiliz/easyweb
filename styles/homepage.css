@@ -1,21 +1,31 @@
-#register {
+.button-lg {
     border: none;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-    background-color: #80b7ff;
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    background-color: #2d3032;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     cursor: pointer;
     margin-left: 0.5rem;
-    border-radius: 1rem;
-    transition: padding 0.1s ease-in-out, letter-spacing 0.1s ease-in-out,
-        filter 0.1s ease-in-out;
+    border-radius: 0.5rem;
+    transition: background-color 0.1s ease-in-out;
     letter-spacing: 0.1rem;
-    margin-bottom: 1rem;
+    margin: 0;
 }
-#register:hover {
-    filter: brightness(105%);
-    padding: 1rem 5rem;
-    letter-spacing: 0.2rem;
+
+.button-lg:hover, #login:hover {
+    background-color: #2d97cb;
+}
+
+#welcome {
+    border-left: 1rem solid #2d3032;
+    text-align: left;
+    padding: 3rem;
+}
+
+#login {
+    margin-left: 1rem;
+    background-color: #adadad;
 }
 
 /* The list */
