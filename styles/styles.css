@@ -37,20 +37,21 @@ body {
     cursor: pointer;
     margin-left: 0.5rem;
     border-radius: 0.5rem;
-    transition: background-color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
     letter-spacing: 0.1rem;
     margin: 0;
     outline: 2px solid #2d3032;
 }
 .button-lg:hover {
     background-color: #2d97cb !important;
+    transform: scale(1.1);
 }
 
 .button-outline {
     background-color: #f8f8f8;
     color: #2d3032;
     outline: 2px solid #2d3032;
-    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 .button-outline:hover {
     color: white;
