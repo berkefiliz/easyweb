@@ -59,7 +59,7 @@
         ).sort((a, b) => (a.level > b.level ? 1 : -1));
         lessons.forEach((lesson) => {
             newcontent += `
-                <div class="item">
+                <div class="item" onclick="window.location = '/lesson.php?id=${lesson.link}'">
                     <div class="img-wrapper">
                         <img src="./thumbnails/${lesson.image}.png" />
                     </div>

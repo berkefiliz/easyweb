@@ -27,6 +27,12 @@ body {
     padding: 2rem;
 }
 
+#welcome {
+    border-left: 1rem solid #2d3032;
+    text-align: left;
+    padding: 3rem;
+}
+
 .button-lg {
     border: none;
     padding: 0.6rem 2rem;
