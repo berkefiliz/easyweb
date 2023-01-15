@@ -46,6 +46,7 @@
 ?>
 
 <script>
+    console.log(Math.pow(2, 100))
     let content = document.getElementById("content");
     SECTIONS.forEach((section) => {
         let newcontent = "";
