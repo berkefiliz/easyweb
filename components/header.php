@@ -75,7 +75,11 @@ include "./serverfunctions/loginCheck.php";
         <?php
             if (isset($_SESSION["secret"]) && $_SESSION["secret"]) {
                 echo '<a href="/serverfunctions/logoutUser.php"
-                    ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+                    ><i class="fa-solid fa-lock"></i> Logout</a
+                >';
+            } else {
+                echo '<a href="/login.php"
+                    ><i class="fa-solid fa-key"></i> Login</a
                 >';
             };
         ?>
