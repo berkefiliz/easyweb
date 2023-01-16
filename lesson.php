@@ -19,8 +19,11 @@
             <h3><?php echo $postheader ?></h3>
             <p><?php echo $postdesc ?></p>
             <div id="post-detail">
-                <span><i class="fa-solid fa-clock"></i>01 Jan 1970</span>
-                <span><i></i></span>
+                <?php
+                    if ($completetime != "") {
+                        echo '<span><i class="fa-solid fa-clock"></i>Completed: ' . $completetime . '</span><span><i></i></span>';
+                    }
+                ?>
                 <span><i class="fa-solid fa-eye"></i>0</span>
                 <span><i class="fa-solid fa-comment"></i></i>0</span>
                 <span><i class="fa-solid fa-star"></i></i>5.0</span>
@@ -28,10 +31,10 @@
         </div>
         <?php include "./lessons/" . $postkey . ".html" ?>
         <?php
-        if (isset($_SESSION["secret"]) && $_SESSION["secret"]) {
+        if (isset($logged)) {
             echo '<form action="./serverfunctions/postComplete.php" method="post">
                 <input id="title" type="hidden" name="title" value="' . $postkey . '"  />
-                <button class="button-lg" type="submit">Mark as complete</button>
+                <button class="button-lg" type="submit">Mark as ' . ($completed ? 'in' : '') . 'complete</button>
             </form>';
         }
         ?>

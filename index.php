@@ -75,7 +75,7 @@
                         <img src="./thumbnails/${lesson.image}.png" />
                     </div>
                     <div class="desc-wrapper">
-                        <p class="name ` + (iscomplete ? " strike" : "") + `">${lesson.level} - ${lesson.title}</p>
+                        <p class="name">${iscomplete ? "<i class='fa-solid fa-check'></i>" : lesson.level} - <span ${iscomplete ? "class='strike'" : ""}>${lesson.title}</span></p>
                         <p class="desc">${lesson.desc}</p>
                         <div class="detail">
                         ` + (iscomplete ? "DONE!" : "") + `
@@ -90,5 +90,5 @@
         newcontent += "</div>";
         content.innerHTML += newcontent;
     });
-    //document.getElementById('rawdata').remove();
+    document.getElementById('rawdata').remove();
 </script>
