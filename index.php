@@ -56,7 +56,6 @@
     COMPLETED.forEach((lesson) => {
         completed.push(lesson["posttitle"]);
     });
-    console.log(completed)
     // Create item grid
     let content = document.getElementById("content");
     SECTIONS.forEach((section) => {
