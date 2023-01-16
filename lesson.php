@@ -29,15 +29,18 @@
                 <span><i class="fa-solid fa-star"></i></i>5.0</span>
             </div>
         </div>
-        <?php include "./lessons/" . $postkey . ".html" ?>
-        <?php
-        if (isset($logged)) {
-            echo '<form action="./serverfunctions/postComplete.php" method="post">
-                <input id="title" type="hidden" name="title" value="' . $postkey . '"  />
-                <button class="button-lg" type="submit">Mark as ' . ($completed ? 'in' : '') . 'complete</button>
-            </form>';
-        }
-        ?>
+        <article>
+            <?php
+                include "./lessons/" . $postkey . ".html";
+                if ($islogged) {
+                    echo '<form id="complete" action="./serverfunctions/postComplete.php" method="post">
+                        <p><i class="fa-solid fa-' . ($completed ? 'xmark' : 'check') . '"></i></p>
+                        <input id="title" type="hidden" name="title" value="' . $postkey . '"  />
+                        <button class="button-lg" type="submit">Mark as ' . ($completed ? 'in' : '') . 'complete</button>
+                    </form>';
+                }
+            ?>
+        </article>
     </div>
 </body>
 
