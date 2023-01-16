@@ -76,3 +76,7 @@ footer {
 footer > i {
     font-size: 2rem;
 }
+
+.strike {
+    text-decoration: line-through;
+}

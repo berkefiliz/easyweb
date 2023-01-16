@@ -51,7 +51,13 @@
 ?>
 
 <script>
-    console.log(Math.pow(2, 100))
+    // List completed lessons
+    let completed = [];
+    COMPLETED.forEach((lesson) => {
+        completed.push(lesson["posttitle"]);
+    });
+    console.log(completed)
+    // Create item grid
     let content = document.getElementById("content");
     SECTIONS.forEach((section) => {
         let newcontent = "";
@@ -63,15 +69,17 @@
             (lesson) => lesson.section == section.id
         ).sort((a, b) => (a.level > b.level ? 1 : -1));
         lessons.forEach((lesson) => {
+            let iscomplete = completed.indexOf(lesson.link) > -1;
             newcontent += `
-                <div class="item" onclick="window.location = '/lesson.php?id=${lesson.link}'">
+                <div id='post-${lesson.link}' class="item" onclick="window.location = '/lesson.php?id=${lesson.link}'">
                     <div class="img-wrapper">
                         <img src="./thumbnails/${lesson.image}.png" />
                     </div>
                     <div class="desc-wrapper">
-                        <p class="name">${lesson.title}</p>
+                        <p class="name ` + (iscomplete ? " strike" : "") + `">${lesson.level} - ${lesson.title}</p>
                         <p class="desc">${lesson.desc}</p>
                         <div class="detail">
+                        ` + (iscomplete ? "DONE!" : "") + `
                             <span><i class="fa-solid fa-eye"></i>0</span>
                             <span><i class="fa-solid fa-comment"></i></i>0</span>
                             <span><i class="fa-solid fa-star"></i></i>5.0</span>
@@ -83,4 +91,5 @@
         newcontent += "</div>";
         content.innerHTML += newcontent;
     });
+    //document.getElementById('rawdata').remove();
 </script>

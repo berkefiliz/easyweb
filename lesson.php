@@ -30,7 +30,7 @@
         <?php
         if (isset($_SESSION["secret"]) && $_SESSION["secret"]) {
             echo '<form action="./serverfunctions/postComplete.php" method="post">
-                <input id="title" type="hidden" name="title" value="<?php echo $postkey ?>"  />
+                <input id="title" type="hidden" name="title" value="' . $postkey . '"  />
                 <button class="button-lg" type="submit">Mark as complete</button>
             </form>';
         }
