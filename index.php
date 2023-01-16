@@ -38,6 +38,11 @@
         }
         ?>
     </div>
+    <footer>
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <p>Please note that the website is still work in progress!</p>
+        <p>There may be missing pages and functionality.</p>
+    </footer>
 </body>
 
 </html>
