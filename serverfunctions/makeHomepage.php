@@ -15,7 +15,7 @@ while ($row = $result->fetch_assoc()) {
 }
 $lessons = json_encode($lessons);
 
-$completed = "null";
+$completed = "[]";
 if (isset($_SESSION["secret"])) {
     $secret = mysqli_real_escape_string($conn, $_SESSION["secret"]);
     $result = mysqli_query($conn, "SELECT secret FROM users WHERE secret='$secret' LIMIT 1;");
