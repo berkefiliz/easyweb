@@ -17,7 +17,9 @@
                 <div id='welcome' class='info'>
                     <h3>Welcome!</h3>
                     <p>Currently logged in as user @$logged!</p>
-                    <p>Soon here will be a progress bar!</p>
+                    <div id='progressbar'>
+                        <div id='progress'></div>
+                    </div>
                 </div>
             ";
         } else {
@@ -90,5 +92,5 @@
         newcontent += "</div>";
         content.innerHTML += newcontent;
     });
-    document.getElementById('rawdata').remove();
+    document.getElementById("rawdata").remove();
 </script>

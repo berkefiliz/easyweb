@@ -13,8 +13,10 @@ $result = mysqli_query($conn, "SELECT * FROM lessons");
 while ($row = $result->fetch_assoc()) {
     $lessons[] = $row;
 }
+$nlessons = count($lessons);
 $lessons = json_encode($lessons);
 
+$progresstext = "";
 $completed = "[]";
 if (isset($_SESSION["secret"])) {
     $secret = mysqli_real_escape_string($conn, $_SESSION["secret"]);
@@ -25,7 +27,10 @@ if (isset($_SESSION["secret"])) {
         while ($row = $result->fetch_assoc()) {
             $completed[] = $row;
         }
+        $ncompleted = count($completed);
         $completed = json_encode($completed);
+        $donepercent = round(($ncompleted / $nlessons) * 100);
+        $progresstext = 'document.getElementById("progress").style.width = "' . $donepercent . '%"';
     }
 }
 
@@ -41,5 +46,6 @@ echo "
         var SECTIONS = $sections;
         var LESSONS = $lessons;
         var COMPLETED = $completed;
+        $progresstext;
     </script>
 ";

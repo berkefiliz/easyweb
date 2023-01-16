@@ -63,6 +63,25 @@
     margin: 0 0.5rem 0 1rem;
 }
 
+/* Profile things */
+
+#progressbar {
+    width: 100%;
+    background-color: #d3d3d3;
+    height: 2rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    outline: 2px solid #2d3032;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#progressbar > div {
+    width: 0%;
+    background-color: #2d97cb;
+    height: 100%;
+    border-radius: 1rem;
+}
+
 /* Temporary footer for WIP */
 
 footer {
