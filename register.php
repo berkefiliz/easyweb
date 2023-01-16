@@ -43,7 +43,7 @@
             <form
                 id="register-form"
                 method="post"
-                action="./serverfunctions/registerUser.php"
+                action="./serverfunctions/userRegister.php"
             >
                 <h2>Register</h2>
                 <div class="form-grid">

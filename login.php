@@ -16,7 +16,7 @@
             <form
                 id="register-form"
                 method="post"
-                action="./serverfunctions/loginUser.php"
+                action="./serverfunctions/userLogin.php"
             >
                 <h2>Login</h2>
                 <div class="form-grid">

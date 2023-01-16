@@ -74,7 +74,7 @@ include "./serverfunctions/loginCheck.php";
     <div class="nav-buttons">
         <?php
             if (isset($_SESSION["secret"]) && $_SESSION["secret"]) {
-                echo '<a href="/serverfunctions/logoutUser.php"
+                echo '<a href="/serverfunctions/userLogout.php"
                     ><i class="fa-solid fa-lock"></i> Logout</a
                 >';
             } else {
