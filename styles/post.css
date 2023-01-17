@@ -129,3 +129,58 @@ pre {
     flex: 1;
     margin: 0;
 }
+
+/* Comments */
+
+/*
+<div id="comments">
+    <div class="comment">
+        <div class="comment-avatar">
+            b
+        </div>
+        <div class="comment-content">
+            <p class="comment-author">@berkefiliz</p>
+            <p class="comment-text">Amazing work!</p>
+            <div class="comment-controls"></div>
+        </div>
+    </div>
+</div>
+*/
+
+.comment {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+.comment-avatar {
+    padding: 2rem;
+    background-color: #2d3032;
+    color: white;
+    font-size: 2rem;
+}
+.comment-content > * {
+    margin: 0;
+}
+.comment-author {
+    padding: 1rem 1rem 0 1rem;
+    color: #2d97cb;
+    font-size: 1.5rem;
+}
+.comment-author::before {
+    content: "@";
+}
+.comment-text {
+    padding: 0 1rem 0 1rem;
+    opacity: 0.8;
+}
+.comment-controls {
+    font-size: 1.2rem;
+    padding: 1rem;
+    opacity: 0.4;
+}
+.comment-controls > * {
+    margin-right: 0.5rem;
+}

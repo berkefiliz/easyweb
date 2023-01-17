@@ -51,7 +51,39 @@
                 ?>
             </form>
         </article>
+        <form action="./serverfunctions/postComment.php" method="post">
+            <input type="hidden" name="posttitle" value="<?php echo $postkey; ?>">
+            <textarea type="text" name="comment"></textarea>
+            <button type="submit">Go</button>
+        </form>
+        <div id="comments">
+            
+        </div>
     </div>
 </body>
 
 </html>
+
+<script>
+    let COMMENTS = <?php echo $comments; ?>;
+    // let username = "<?php echo ($islogged ? $logged : ''); ?>";
+    let commentdiv = document.getElementById("comments");
+    COMMENTS.forEach((comment) => {
+        commentdiv.innerHTML += `
+            <div class="comment">
+                <div class="comment-avatar">
+                    <i class="fa-solid fa-${comment.username == 'berkefiliz' ? 'crown' : 'comment'}"></i>
+                </div>
+                <div class="comment-content">
+                    <p class="comment-author">${comment.username}</p>
+                    <p class="comment-text">${comment.comment}</p>
+                    <div class="comment-controls">
+                        <i class="fa-solid fa-chevron-up"></i>
+                        <span>15</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        `;
+    })
+</script>

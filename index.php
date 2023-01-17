@@ -52,7 +52,7 @@
 <?php include "./serverfunctions/makeHomepage.php"; 
 ?>
 
-<script>
+<script id="make-homepage">
     // List completed lessons
     let completed = [];
     COMPLETED.forEach((lesson) => {
@@ -93,4 +93,5 @@
         content.innerHTML += newcontent;
     });
     document.getElementById("rawdata").remove();
+    document.getElementById("make-homepage").remove();
 </script>
