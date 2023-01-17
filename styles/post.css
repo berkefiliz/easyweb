@@ -11,6 +11,10 @@
     padding-bottom: 1rem;
 }
 
+#welcome > h3::before {
+    content: none !important;
+}
+
 #complete {
     margin-top: 5rem;
     text-align: end;

@@ -12,7 +12,7 @@
     <?php include "./components/header.php"; ?>
     <div id="content">
         <?php
-        if (isset($logged)) {
+        if (isset($logged) && $islogged) {
             echo "
                 <div id='welcome' class='info'>
                     <h3>Welcome!</h3>

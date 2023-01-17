@@ -20,9 +20,9 @@
             <p><?php echo $postdesc ?></p>
             <div id="post-detail">
                 <?php
-                    if ($completetime != "") {
-                        echo '<span><i class="fa-solid fa-clock"></i>Completed: ' . $completetime . '</span><span><i></i></span>';
-                    }
+                if ($completetime != "") {
+                    echo '<span><i class="fa-solid fa-clock"></i>Completed: ' . $completetime . '</span><span><i></i></span>';
+                }
                 ?>
                 <span><i class="fa-solid fa-eye"></i>0</span>
                 <span><i class="fa-solid fa-comment"></i></i>0</span>
@@ -31,14 +31,19 @@
         </div>
         <article>
             <?php
-                include "./lessons/" . $postkey . ".html";
-                if ($islogged) {
-                    echo '<form id="complete" action="./serverfunctions/postComplete.php" method="post">
+            include "./lessons/" . $postkey . ".html";
+            if ($islogged) {
+                echo '<form id="complete" action="./serverfunctions/postComplete.php" method="post">
                         <p><i class="fa-solid fa-' . ($completed ? 'xmark' : 'check') . '"></i></p>
                         <input id="title" type="hidden" name="title" value="' . $postkey . '"  />
                         <button class="button-lg" type="submit">Mark as ' . ($completed ? 'in' : '') . 'complete</button>
                     </form>';
-                }
+            } else {
+                echo '<div id="complete">
+                        <p><i class="fa-solid fa-backward"></i></p>
+                        <button class="button-lg" type="submit" onclick="window.location = \'/index.php\'">Go back</button>
+                    </div>';
+            }
             ?>
         </article>
     </div>
