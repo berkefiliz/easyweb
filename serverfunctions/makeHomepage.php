@@ -16,6 +16,13 @@ while ($row = $result->fetch_assoc()) {
 $nlessons = count($lessons);
 $lessons = json_encode($lessons);
 
+$ncomments = array();
+$result = mysqli_query($conn, "SELECT posttitle, COUNT(*) as n FROM comments GROUP BY posttitle;");
+while ($row = $result->fetch_assoc()) {
+    $ncomments[] = $row;
+}
+$ncomments = json_encode($ncomments);
+
 $progresstext = "";
 $completed = "[]";
 if (isset($_SESSION["secret"])) {
@@ -34,11 +41,6 @@ if (isset($_SESSION["secret"])) {
     }
 }
 
-// $stmt = $conn -> prepare("UPDATE `postindex` SET `views` = `views` + 1 WHERE `uid` = ?");
-// $stmt -> bind_param("s", $uid);
-// $stmt -> execute();
-// $stmt -> close();
-
 $conn->close();
 
 echo "
@@ -46,6 +48,7 @@ echo "
         var SECTIONS = $sections;
         var LESSONS = $lessons;
         var COMPLETED = $completed;
+        var NCOMMENTS = $ncomments;
         $progresstext;
     </script>
 ";

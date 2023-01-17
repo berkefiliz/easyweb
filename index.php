@@ -58,6 +58,11 @@
     COMPLETED.forEach((lesson) => {
         completed.push(lesson["posttitle"]);
     });
+    // Inject ncomments
+    NCOMMENTS.forEach((nc) => {
+        objIndex = LESSONS.findIndex((lesson => lesson.link == nc.posttitle));
+        LESSONS[objIndex].ncomments = nc.n;
+    })
     // Create item grid
     let content = document.getElementById("content");
     SECTIONS.forEach((section) => {
@@ -74,15 +79,15 @@
             newcontent += `
                 <div id='post-${lesson.link}' class="item" onclick="window.location = '/lesson.php?id=${lesson.link}'">
                     <div class="img-wrapper">
-                        <img src="./thumbnails/${lesson.image}.png" />
+                        <img src="./thumbnails/${lesson.link}.png" />
                     </div>
                     <div class="desc-wrapper">
                         <p class="name">${iscomplete ? "<i class='fa-solid fa-check'></i>" : lesson.level} - <span ${iscomplete ? "class='strike'" : ""}>${lesson.title}</span></p>
                         <p class="desc">${lesson.desc}</p>
                         <div class="detail">
                         ` + (iscomplete ? "DONE!" : "") + `
-                            <span><i class="fa-solid fa-eye"></i>0</span>
-                            <span><i class="fa-solid fa-comment"></i></i>0</span>
+                            <span><i class="fa-solid fa-eye"></i>${lesson.views}</span>
+                            <span><i class="fa-solid fa-comment"></i></i>${lesson.hasOwnProperty('ncomments') ? lesson.ncomments : 0}</span>
                             <span><i class="fa-solid fa-star"></i></i>5.0</span>
                         </div>
                     </div>

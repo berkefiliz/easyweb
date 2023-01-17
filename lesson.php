@@ -29,8 +29,8 @@
                     echo '<span><i class="fa-solid fa-clock"></i>Completed: ' . $completetime . '</span><span><i></i></span>';
                 }
                 ?>
-                <span><i class="fa-solid fa-eye"></i>0</span>
-                <span><i class="fa-solid fa-comment"></i></i>0</span>
+                <span><i class="fa-solid fa-eye"></i><?php echo $postviews ?></span>
+                <span><i class="fa-solid fa-comment"></i></i><?php echo $postncomments ?></span>
                 <span><i class="fa-solid fa-star"></i></i>5.0</span>
             </div>
         </div>
