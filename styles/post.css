@@ -132,20 +132,31 @@ pre {
 
 /* Comments */
 
-/*
-<div id="comments">
-    <div class="comment">
-        <div class="comment-avatar">
-            b
-        </div>
-        <div class="comment-content">
-            <p class="comment-author">@berkefiliz</p>
-            <p class="comment-text">Amazing work!</p>
-            <div class="comment-controls"></div>
-        </div>
-    </div>
-</div>
-*/
+#comment-add {
+    display: flex;
+    border-top: 1rem solid #2d3032;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+#comment-add > textarea {
+    flex: 1;
+    max-height: 10rem;
+    min-height: 1.2rem;
+    height: 1.2rem;
+    padding: 1rem;
+}
+#comment-add > button {
+    max-height: 2.4rem;
+}
+
+#comments {
+    margin-bottom: 10rem;
+}
 
 .comment {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;

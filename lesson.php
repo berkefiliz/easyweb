@@ -51,14 +51,20 @@
                 ?>
             </form>
         </article>
-        <form action="./serverfunctions/postComment.php" method="post">
-            <input type="hidden" name="posttitle" value="<?php echo $postkey; ?>">
-            <textarea type="text" name="comment"></textarea>
-            <button type="submit">Go</button>
-        </form>
-        <div id="comments">
-            
-        </div>
+        <?php 
+            if (isset($_SESSION["secret"]) && $islogged) {
+                echo '
+                    <h3>Post a comment</h3>
+                    <form id="comment-add" action="./serverfunctions/postComment.php" method="post">
+                        <input type="hidden" name="posttitle" value="' . $postkey . '">
+                        <textarea type="text" maxlength="1000" placeholder="Maximum 1000 characters" name="comment"></textarea>
+                        <button type="submit" class="button-lg"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                ';
+            }
+        ?>
+        <h3>Comments</h3>
+        <div id="comments"></div>
     </div>
 </body>
 
@@ -85,5 +91,8 @@
                 </div>
             </div>
         `;
-    })
+    });
+    if (COMMENTS.length == 0) {
+        commentdiv.innerHTML += "<p>No comments yet</p>";
+    }
 </script>
