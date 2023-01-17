@@ -16,10 +16,10 @@
 }
 
 #complete {
-    margin-top: 5rem;
+    margin: 3rem 0;
     text-align: end;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: end;
 }
 
@@ -27,6 +27,10 @@
     font-size: 1.5rem;
     padding: 0.5rem;
     margin: 0;
+}
+
+.strike {
+    text-decoration: line-through;
 }
 
 /* Post components */
@@ -114,11 +118,13 @@ pre {
     font-size: 2rem;
 }
 .icontext > code {
+    font-size: 1.2rem;
     padding: 2rem;
     flex: 1;
     overflow-x: auto;
 }
 .icontext > .text {
+    font-size: 1.2rem !important;
     padding: 2rem;
     flex: 1;
     margin: 0;

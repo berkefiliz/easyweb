@@ -16,7 +16,12 @@
     ?>
     <div id="content">
         <div id='welcome' class='info'>
-            <h3><?php echo $postheader ?></h3>
+            <h3>
+                <?php echo ($completed ? "<i class='fa-solid fa-check'></i> " : ""); ?>
+                <span <?php echo ($completed ? 'class="strike"' : ""); ?>>
+                    <?php echo $postheader ?>
+                </span>
+            </h3>
             <p><?php echo $postdesc ?></p>
             <div id="post-detail">
                 <?php
@@ -30,21 +35,21 @@
             </div>
         </div>
         <article>
-            <?php
-            include "./lessons/" . $postkey . ".html";
-            if ($islogged) {
-                echo '<form id="complete" action="./serverfunctions/postComplete.php" method="post">
-                        <p><i class="fa-solid fa-' . ($completed ? 'xmark' : 'check') . '"></i></p>
+            <?php include "./lessons/" . $postkey . ".html"; ?>
+            <form id="complete" action="./serverfunctions/postComplete.php" method="post">
+                <p><i class="fa-solid fa-backward"></i></p>
+                <button class="button-lg button-outline" type="button" onclick="window.location = '/index.php'">Go back</button>
+                <?php
+                if ($islogged) {
+                    echo '
                         <input id="title" type="hidden" name="title" value="' . $postkey . '"  />
-                        <button class="button-lg" type="submit">Mark as ' . ($completed ? 'in' : '') . 'complete</button>
-                    </form>';
-            } else {
-                echo '<div id="complete">
-                        <p><i class="fa-solid fa-backward"></i></p>
-                        <button class="button-lg" type="submit" onclick="window.location = \'/index.php\'">Go back</button>
-                    </div>';
-            }
-            ?>
+                        <button class="button-lg" type="submit">
+                            <i class="fa-solid fa-' . ($completed ? 'xmark' : 'check') . '"></i> Mark as ' . ($completed ? 'in' : '') . 'complete
+                        </button>
+                    ';
+                }
+                ?>
+            </form>
         </article>
     </div>
 </body>
