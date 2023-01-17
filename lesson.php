@@ -82,7 +82,7 @@
                 </div>
                 <div class="comment-content">
                     <p class="comment-author">${comment.username}</p>
-                    <p class="comment-text">${comment.comment}</p>
+                    <p class="comment-text">${comment.comment.replace(/(?:\\(.))/g, '$1')}</p>
                     <div class="comment-controls">
                         <i class="fa-solid fa-chevron-up"></i>
                         <span>15</span>
