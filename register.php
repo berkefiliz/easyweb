@@ -56,6 +56,7 @@
                             placeholder="Username*"
                             tabindex="1"
                             onfocus="focusText('username')"
+                            maxlength="30"
                             required
                         />
                     </div>
@@ -68,6 +69,7 @@
                             placeholder="Title / Profession"
                             onfocus="focusText('title')"
                             tabindex="2"
+                            maxlength="100"
                         />
                     </div>
                     <div>
@@ -79,6 +81,7 @@
                             placeholder="Password*"
                             onfocus="focusText('password')"
                             tabindex="3"
+                            maxlength="50"
                             required
                         />
                     </div>
@@ -91,6 +94,7 @@
                             placeholder="Confirm password*"
                             onfocus="focusText('password2')"
                             tabindex="4"
+                            maxlength="50"
                             required
                         />
                     </div>
