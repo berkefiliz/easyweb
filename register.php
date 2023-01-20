@@ -22,7 +22,7 @@
                         break;
                     case "password":
                         div.innerHTML =
-                            "Your password needs to be between 8 and 50 characters.<br>Use letters or numbers only.<br>Do not share your password with anyone!";
+                            "Your password needs to be between 8 and 50 characters.<br>Recommended to use upper-/lowercase letters, numbers and punctuation.<br>Do not share your password with anyone!";
                         break;
                     case "password2":
                         div.innerHTML =
