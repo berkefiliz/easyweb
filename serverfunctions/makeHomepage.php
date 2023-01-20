@@ -37,7 +37,10 @@ if (isset($_SESSION["secret"])) {
         $ncompleted = count($completed);
         $completed = json_encode($completed);
         $donepercent = round(($ncompleted / $nlessons) * 100);
-        $progresstext = 'document.getElementById("progress").style.width = "' . $donepercent . '%"';
+        $progresstext = '
+            document.getElementById("progress").style.width = "min(calc(' . $donepercent . '% + 6rem), 100%)";
+            document.getElementById("progresstext").innerHTML = "<i class=\'fa-solid fa-graduation-cap\'></i> ' . $ncompleted . ' / ' . $nlessons . '";
+        ';
     }
 }
 

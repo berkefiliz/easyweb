@@ -16,9 +16,10 @@
             echo "
                 <div id='welcome' class='info'>
                     <h3>Welcome!</h3>
-                    <p>Currently logged in as user @$logged!</p>
+                    <p>Currently logged in as user <span id='username'>@$logged!</span></p>
                     <div id='progressbar'>
-                        <div id='progress'></div>
+                        <div id='progresstext'>0/3</div>
+                        <div id='progress' class='abar'></div>
                     </div>
                 </div>
             ";
@@ -99,4 +100,5 @@
     });
     document.getElementById("rawdata").remove();
     document.getElementById("make-homepage").remove();
+    document.getElementById("progress").style.flex = COMPLETED.length / LESSONS.length;
 </script>
