@@ -130,6 +130,15 @@ pre {
     margin: 0;
 }
 
+.icontext > .sandbox {
+    font-size: 1.2rem !important;
+    padding: 1rem;
+    flex: 1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Comments */
 
 #comment-add {
@@ -196,7 +205,6 @@ pre {
     margin-right: 0.5rem;
 }
 
-
 /* Sandbox */
 
 .sandbox-select {
@@ -209,4 +217,9 @@ pre {
 
 .sandbox-select > option {
     font-family: "Ubuntu";
+}
+
+.sandbox > .testground {
+    background-color: white;
+    border: 1px dashed #2d3032;
 }

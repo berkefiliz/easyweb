@@ -4,26 +4,35 @@
 
 <div class="icontext sandbox">
     <div class="icon"><i class="fa-solid fa-flask"></i></div>
-    <script>
-        function sb1_colorchange(value) {
-            let s = document.getElementById("sb1-square");
-            s.style.backgroundColor = value;
-        }
-    </script>
-    <style scoped>
-        #sb1-square {
-            width: 100px;
-            height: 100px;
-            background-color: blue;
-        }
-    </style>
-    <p class="text">
-        The color of the square on the right is 
-        <select id="sb1" class="sandbox-select" onchange="sb1_colorchange(this.value)">
-            <option value="blue">blue</option>
-            <option value="red">red</option>
-            <option value="green">green</option>
-        </select>. Does that work?
-    </p>
-    <div id="sb1-square"></div>
+    <div class="sandbox">
+        <script>
+            function sb1_colorchange(value) {
+                let s = document.getElementById("sb1-square");
+                s.style.backgroundColor = value;
+            }
+        </script>
+        <p class="text">
+            The color of the square on the right is
+            <select
+                id="sb1"
+                class="sandbox-select"
+                onchange="sb1_colorchange(this.value)"
+            >
+                <option value="blue">blue</option>
+                <option value="red">red</option>
+                <option value="green">green</option></select
+            >. Does that work?
+        </p>
+        <div class="testground">
+            <style scoped>
+                #sb1-square {
+                    width: 3rem;
+                    height: 3rem;
+                    margin: auto;
+                    background-color: blue;
+                }
+            </style>
+            <div id="sb1-square"></div>
+        </div>
+    </div>
 </div>
