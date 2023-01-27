@@ -50,7 +50,7 @@
 
 </html>
 
-<?php include "./serverfunctions/makeHomepage.php"; 
+<?php include "./serverfunctions/makeHomepage.php";
 ?>
 
 <script id="make-homepage">
@@ -76,17 +76,22 @@
             (lesson) => lesson.section == section.id
         ).sort((a, b) => (a.level > b.level ? 1 : -1));
         lessons.forEach((lesson) => {
-            let iscomplete = completed.indexOf(lesson.link) > -1;
+            let iscomplete = completed.indexOf(lesson.link) > -1; // <i class='fa-solid fa-check'></i>
             newcontent += `
                 <div id='post-${lesson.link}' class="item" onclick="window.location = '/lesson.php?id=${lesson.link}'">
                     <div class="img-wrapper">
                         <img src="./thumbnails/${lesson.link}.png" />
                     </div>
                     <div class="desc-wrapper">
-                        <p class="name">${iscomplete ? "<i class='fa-solid fa-check'></i>" : lesson.level} - <span ${iscomplete ? "class='strike'" : ""}>${lesson.title}</span></p>
+                        <form class="name" action="./serverfunctions/postComplete.php" method="post">
+                            <input type="hidden" name="title" value="${lesson.link}">
+                            <button class="button-lg button-delete" type="submit">
+                                ${iscomplete ? "<i class='fa-solid fa-check'></i>" : lesson.level} - 
+                                <span ${iscomplete ? "class='strike'" : ""}>${lesson.title}</span>
+                            </button>
+                        </form>
                         <p class="desc">${lesson.desc}</p>
                         <div class="detail">
-                        ` + (iscomplete ? "DONE!" : "") + `
                             <span><i class="fa-solid fa-eye"></i>${lesson.views}</span>
                             <span><i class="fa-solid fa-comment"></i></i>${lesson.hasOwnProperty('ncomments') ? lesson.ncomments : 0}</span>
                             <span><i class="fa-solid fa-star"></i></i>5.0</span>
