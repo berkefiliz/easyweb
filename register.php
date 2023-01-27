@@ -16,9 +16,9 @@
                         div.innerHTML =
                             "Your username is unique to you.<br>It must be between 3 and 30 characters long.";
                         break;
-                    case "title":
+                    case "email":
                         div.innerHTML =
-                            "Optional. Your title could be your job, or anything similar.<br>Or just put the name of your favourite Pokemon!";
+                            "Optional. This will be used only if you request a new password.";
                         break;
                     case "password":
                         div.innerHTML =
@@ -30,7 +30,7 @@
                         break;
                     case "register":
                         div.innerHTML =
-                            "Ready to start?<br>You can always change your title and password!";
+                            "Ready to start?<br>You can always change your email and password!";
                         break;
                 }
             }
@@ -61,15 +61,15 @@
                         />
                     </div>
                     <div>
-                        <i class="fa-solid fa-briefcase"></i>
+                        <i class="fa-solid fa-at"></i>
                         <input
-                            id="title"
-                            type="title"
-                            name="title"
-                            placeholder="Title / Profession"
-                            onfocus="focusText('title')"
-                            tabindex="2"
-                            maxlength="100"
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="Email (optional)"
+                            onfocus="focusText('email')"
+                            tabindex="6"
+                            maxlength="150"
                         />
                     </div>
                     <div>
@@ -142,6 +142,10 @@
                 case "password_alpha":
                     errortext =
                         "The password must only contain letters and numbers!";
+                    break;
+                case "email_bad":
+                    errortext =
+                        "The email provided is not valid!";
                     break;
                 case "username_length":
                     errortext =
