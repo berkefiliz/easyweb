@@ -85,7 +85,7 @@
                     <p class="comment-text">${comment.comment.replace(/(?:\\(.))/g, '$1')}</p>
                     <div class="comment-controls">
                         <i class="fa-solid fa-chevron-up"></i>
-                        <span>15</span>
+                        <span>0</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                 </div>
