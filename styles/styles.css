@@ -64,6 +64,19 @@ body {
     color: white;
 }
 
+.button-icon {
+    background-color: transparent;
+    color: #2d3032;
+    transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: none;
+    outline: none;
+    padding: 0.6rem;
+}
+.button-icon:hover {
+    background-color: transparent !important;
+    color: #2d97cb;
+}
+
 article {
     margin-bottom: 10rem;
 }

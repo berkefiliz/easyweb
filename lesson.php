@@ -25,14 +25,21 @@
             </h3>
             <p><?php echo $postdesc ?></p>
             <div id="post-detail">
-                <?php
-                if ($completetime != "") {
-                    echo '<span><i class="fa-solid fa-clock"></i>Completed: ' . $completetime . '</span><span><i></i></span>';
-                }
-                ?>
-                <span><i class="fa-solid fa-eye"></i><?php echo $postviews ?></span>
-                <span><i class="fa-solid fa-comment"></i></i><?php echo $postncomments ?></span>
-                <span><i class="fa-solid fa-star"></i></i>5.0</span>
+                <span id="post-detail-actions">
+                    <button class="button-lg button-icon" type="button" onclick="window.location = '/index.php'">
+                        <i class="fa-solid fa-backward"></i>&nbsp;&nbsp;Go back
+                    </button>
+                </span>
+                <span id="post-detail-info">
+                    <?php
+                    if ($completetime != "") {
+                        echo '<span><i class="fa-solid fa-clock"></i>Completed: ' . $completetime . '</span><span><i></i></span>';
+                    }
+                    ?>
+                    <span><i class="fa-solid fa-eye"></i><?php echo $postviews ?></span>
+                    <span><i class="fa-solid fa-comment"></i></i><?php echo $postncomments ?></span>
+                    <span><i class="fa-solid fa-star"></i></i>5.0</span>
+                </span>
             </div>
         </div>
         <article>
@@ -52,9 +59,9 @@
                 ?>
             </form>
         </article>
-        <?php 
-            if (isset($_SESSION["secret"]) && $islogged) {
-                echo '
+        <?php
+        if (isset($_SESSION["secret"]) && $islogged) {
+            echo '
                     <h3>Post a comment</h3>
                     <form id="comment-add" action="./serverfunctions/postComment.php" method="post">
                         <input type="hidden" name="posttitle" value="' . $postkey . '">
@@ -62,7 +69,7 @@
                         <button type="submit" class="button-lg"><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 ';
-            }
+        }
         ?>
         <h3>Comments</h3>
         <div id="comments"></div>

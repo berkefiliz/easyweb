@@ -1,9 +1,13 @@
 #post-detail {
-    opacity: 0.4;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
     font-size: 1rem;
+    margin-bottom: 1rem;
 }
-#post-detail > span > i {
+#post-detail-info {
+    opacity: 0.4;
+}
+#post-detail-info > span > i {
     margin: 0 0.5rem 0 1rem;
 }
 
