@@ -62,7 +62,7 @@
         <?php
         if (isset($_SESSION["secret"]) && $islogged) {
             echo '
-                    <h3>Post a comment</h3>
+                    <h3 id="comment-anchor">Post a comment</h3>
                     <form id="comment-add" action="./serverfunctions/postComment.php" method="post">
                         <input type="hidden" name="posttitle" value="' . $postkey . '">
                         <textarea type="text" maxlength="1000" placeholder="Maximum 1000 characters" name="comment"></textarea>
@@ -78,7 +78,7 @@
 
 </html>
 
-<script>
+<script id="make-comments">
     let COMMENTS = <?php echo $comments; ?>;
     // let username = "<?php echo ($islogged ? $logged : ''); ?>";
     let commentdiv = document.getElementById("comments");
@@ -103,4 +103,11 @@
     if (COMMENTS.length == 0) {
         commentdiv.innerHTML += "<p>No comments yet</p>";
     }
+
+    if (window.location.href.indexOf("?comment=success") > -1) {
+        document.getElementById("comment-anchor").scrollIntoView();
+        window.scrollBy(0, -50);
+    }
+
+    document.getElementById("make-comments").remove();
 </script>

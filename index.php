@@ -106,10 +106,10 @@
     document.getElementById("rawdata").remove();
     document.getElementById("progress").style.flex = COMPLETED.length / LESSONS.length;
 
-    let url = window.location.href;
-    if (url.indexOf("?") > -1) {
+    if (window.location.href.indexOf("?") > -1) {
         let target = url.split("?post=")[1];
-        document.getElementById("post-" + target).scrollIntoView({block: "end"});
+        document.getElementById("post-" + target).scrollIntoView();
+        window.scrollBy(0, -100);
     }
 
     document.getElementById("make-homepage").remove();
