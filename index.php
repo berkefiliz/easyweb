@@ -104,6 +104,13 @@
         content.innerHTML += newcontent;
     });
     document.getElementById("rawdata").remove();
-    document.getElementById("make-homepage").remove();
     document.getElementById("progress").style.flex = COMPLETED.length / LESSONS.length;
+
+    let url = window.location.href;
+    if (url.indexOf("?") > -1) {
+        let target = url.split("?post=")[1];
+        document.getElementById("post-" + target).scrollIntoView({block: "end"});
+    }
+
+    document.getElementById("make-homepage").remove();
 </script>
