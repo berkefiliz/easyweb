@@ -16,6 +16,7 @@
     ?>
     <div id="content">
         <div id='welcome' class='info'>
+            <img src="./thumbnails/<?php echo $postkey ?>.png" alt="Lesson icon">
             <h3>
                 <?php echo ($completed ? "<i class='fa-solid fa-check'></i> " : ""); ?>
                 <span <?php echo ($completed ? 'class="strike"' : ""); ?>>
