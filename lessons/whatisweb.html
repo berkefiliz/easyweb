@@ -1,91 +1,137 @@
-<h2>First section</h2>
+<h2>Web design</h2>
 
-<h3>Placeholder title</h3>
+<h3>Introduction</h3>
 
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, orci
-    ac egestas gravida, diam neque suscipit lectus, sed fringilla risus orci sit
-    amet nunc. Nunc non neque sit amet augue porttitor tristique in vitae
-    turpis. Etiam in tincidunt lectus, in elementum tortor. Nam nec lacus non ex
-    vehicula vestibulum. Praesent ac suscipit velit, vitae hendrerit diam.
-    Suspendisse tempus <b>cursus</b> ultricies. Vivamus at diam vitae justo
-    egestas porta ut nec odio. Vestibulum maximus elit odio, quis imperdiet
-    massa lobortis ut. Ut lorem felis, placerat quis ante id, hendrerit
-    <u>maximus</u> quam. Proin vel blandit neque. Vivamus ac velit sed nulla
-    ornare tincidunt a ut ligula. Maecenas elementum ante id gravida blandit.
-    Curabitur eu sollicitudin lacus, vitae imperdiet libero.
+    As pretty much everyting else, <dfn>web design</dfn> is a very broad term
+    that consists of various subtopics. In a really general sense, it refers to
+    the design of a website that is displayed on the internet. The size, color,
+    animations and functionality of a button on a website is therefore a product
+    of web design.
+</p>
+
+<p>
+    I find the approach "practical knowledge before theoritical" and so I will
+    be discussing the terminology in much more detail as we cover the related
+    coding section. That said, I would like to give an overview of the inner
+    works of web design.
+</p>
+
+<h3>Frontend vs backend</h3>
+
+<p>
+    When we are talking about anything that is visible to the user, we talk
+    about <dfn>frontend design</dfn>. When you look at the layout of the
+    website, or font sizes, or how a button's color changes when you hover over
+    it with your mouse, or how you navigate to another page when you click on
+    "Go back" are all parts of the frontend. This is a very large area as well,
+    and this guide will cover some of the two main aspects of it:
 </p>
 
 <ul>
-    <li>This is a list item</li>
-    <li>Here comes another one</li>
-    <li>Very convenient, isn't it?</li>
+    <li>User Interface (UI): The look of a website</li>
+    <li>User Experience (UX): The feel of a website</li>
 </ul>
 
-<hr />
-
-<h3>Another title</h3>
-
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit tellus
-    non luctus maximus. Etiam a ultrices turpis. Fusce sodales dignissim ligula
-    eget vehicula. Proin semper ipsum vel iaculis imperdiet. Maecenas ornare
-    eros eu blandit molestie. Ut felis augue, tempor non maximus sit amet,
-    pharetra a est. Quisque in lectus malesuada dolor facilisis blandit.
-    Curabitur consequat lacus ac est vestibulum, eu laoreet purus ornare. Donec
-    ut metus orci. Suspendisse nec metus risus. Donec pharetra elementum congue.
+    These two terms feed each other and a good website should excel at both. If
+    you find the color palette an eyesore, maybe that was not a good UI
+    decision. If you found navigating between pages difficult, the UX needs
+    improvements.
 </p>
 
-<div class="icontext">
-    <div class="icon"><i class="fa-solid fa-code"></i></div>
-    <code>
-        <pre>
-<b>&lt;p&gt;</b>Hello world!<b>&lt;/p&gt;</b>
-</pre>
-    </code>
-</div>
-
-<h2>More things</h2>
-
-<h3>Who reads these really</h3>
+<p>
+    Especially when the website deals with data, we are talking about
+    <b>backend design</b>. This may be as simple as storing the username and
+    password of users, retrieving the data when necessary to see whether the
+    credentials were correct to log in. I am saying <i>simple</i> not because it
+    is easy, but because the idea behind it is simple.
+</p>
 
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in consequat
-    libero, eget sollicitudin neque. In dolor risus, gravida quis luctus eu,
-    facilisis eu lorem. Pellentesque urna elit, fermentum ac accumsan nec,
-    tincidunt et est. Suspendisse potenti. Vivamus in felis ac ex eleifend
-    sollicitudin et convallis magna. Vestibulum ante ipsum primis in faucibus
-    orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames
-    ac ante ipsum primis in faucibus. Etiam diam augue, volutpat in felis a,
-    mollis pellentesque neque. Duis consequat malesuada interdum. Integer ut
-    varius lectus.
+    The topics backend design covers are not directly visible to the user. For
+    example, a user should not be able to view the data stored on the servers.
+    So the data has to be secure. When I am retrieving data for this lesson or
+    when the user is trying to log in, that should be quick. I have to
+    oversimplify this topic for now, as pretty much everyting backend deals with
+    is very abstract. Without some context, it is difficult to give examples.
 </p>
 
 <div class="icontext">
     <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
     <p class="text">
-        This is a <b>very</b> insightful comment. I am more curious about how
-        this thing behaves when there are multiple lines. So what if I put here
-        a couple sentences and check it out? I believe it works well. Phew!
-        <br /><br />
-        Even multiple paragraphs. Incredible!
+        As a quick summary, <b>frontend</b> deals with everyting that is visible
+        to the user and therefore handled in the web browser. Meanwhile
+        <b>backend</b> deals with everything that is not necessarily visible to
+        the user and therefore handled on a server and not on the web browser.
     </p>
 </div>
 
-<h2>Experiments</h2>
+<h3>Other things</h3>
+
+<p>
+    For a public web project, the modern standards are high and continuously
+    evolving. It is no longer enough just look nice for the website to be
+    considered good. There are many aspects of <b>frontend design</b> that
+    require throughout thinking and prior planning.
+</p>
+
+<p>
+    Let's think of a widely used website. Think of your favourite store. Go and
+    visit their website on your desktop, and then visit the same page on your
+    phone. Do you see any differences? For most of the cases, the answer should
+    be yes. This is because the designers need to make sure the website looks
+    well on any common screen size. Desktops have a landscape (wide) screen
+    while phones have a portrait (longer and narrow) screen. Hence, it may be
+    more difficult to fit two elements side by side on a phone screen and the
+    website has to adapt. This is called <b>responsive</b> design.
+</p>
 
 <div class="icontext">
     <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
     <p class="text">
-        Putting this to the real test today. What if I had multiple columns? Not
-        really sure about the use case here but maybe I can list things on the
-        other column?
+        The context does matter for these standards. If you open
+        <b>EasyWeb</b> on your phone, you will realize there is no difference
+        between phone and desktop sites. This is because the guide is meant to
+        be followed along on a desktop so that you can write and experiment with
+        code on the side. It was a conscious decision to not spend any time
+        resource on making sure it has a different layout for mobile, as the
+        development of the content is right now more important than mobile
+        support.
     </p>
-    <ul class="text">
-        <li>I can list things</li>
-        <li>Not sure what else</li>
-        <li>Maybe I can put an image or something</li>
-        <li>Endless possibilities...</li>
-        <li>Look at me go!</li>
-    </ul>
 </div>
+
+<p>
+    Another thing to consider is the <b>accessibility</b> of a website. I can
+    give a very basic example of putting white text on yellow background. I am
+    thinking of something
+    <span style="background-color: yellow; color: white">like this</span>. You
+    will see it is very difficult to read. There is an acceptable range of
+    contrast, which makes using colors that are too similar and too different
+    from each other.
+</p>
+
+<p>
+    Accessibility covers much more. Anyone with an impairment should be able to
+    navigate the site. Do you not use any gaps between text for it to "breathe"
+    a bit? Do you use a font that is very uncommon? Do you have flashing
+    animations? Are your fonts, layouts and colors not consistent with each
+    other? Then these are things you should reconsider. Honestly, this topic
+    deserves its own lesson and I will be covering that in the future.
+</p>
+
+<h3>Final notes</h3>
+
+<p>
+    There are so many aspects of the design like the ones listed above. Some
+    such as security and functionality sound trivial. Some such as search engine
+    optimization and accesibility are too large to cover in a single lesson. I
+    will make sure to address these when necessary throughout the blog and I
+    will also have a section to wrap up these topics towards the end. Otherwise
+    the list of topics will feel like an information dump :/
+</p>
+
+<p>
+    Now let's focus on setting up your work environment so that you can start
+    coding. You can find more information about that in the next lesson!
+</p>
