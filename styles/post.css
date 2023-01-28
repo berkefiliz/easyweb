@@ -92,9 +92,10 @@ li::before {
     height: 1rem;
 }
 
-b {
+b, dfn {
     color: #2d97cb;
     font-weight: 300;
+    text-decoration: none;
 }
 
 hr {

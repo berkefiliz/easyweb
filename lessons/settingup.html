@@ -1,91 +1,114 @@
-<h2>First section</h2>
+<h2>Prerequisites</h2>
 
-<h3>Placeholder title</h3>
+<h3>A web browser</h3>
 
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, orci
-    ac egestas gravida, diam neque suscipit lectus, sed fringilla risus orci sit
-    amet nunc. Nunc non neque sit amet augue porttitor tristique in vitae
-    turpis. Etiam in tincidunt lectus, in elementum tortor. Nam nec lacus non ex
-    vehicula vestibulum. Praesent ac suscipit velit, vitae hendrerit diam.
-    Suspendisse tempus <b>cursus</b> ultricies. Vivamus at diam vitae justo
-    egestas porta ut nec odio. Vestibulum maximus elit odio, quis imperdiet
-    massa lobortis ut. Ut lorem felis, placerat quis ante id, hendrerit
-    <u>maximus</u> quam. Proin vel blandit neque. Vivamus ac velit sed nulla
-    ornare tincidunt a ut ligula. Maecenas elementum ante id gravida blandit.
-    Curabitur eu sollicitudin lacus, vitae imperdiet libero.
+    Judging by the fact that you are here, you already have a web browser! In
+    the broadest definition of <dfn>web browser</dfn>, it is an application that
+    lets a user to access a website. There is a lot of options available for
+    this, however most people use Google Chrome, Mozilla Firefox, Safari or
+    Opera. Recently, Internet Explorer has been discontinued and replaced by
+    Microsoft Edge, which is now the default on Windows.
 </p>
+
+<p>
+    Why do we need it? Well, we will be writing code as text files. Think of
+    this as writing an essay. Now you want your titles to be a bit larger and
+    colored red. Now you want to center an image. So, you need a program to
+    interpret what you have written, figure out where your titles are, and
+    display the page with the rules we have just defined. We could find an
+    application to do all of these steps for us, so that we have an idea on what
+    is displayed on screen. Luckily, we do not need to look far. All common
+    browsers support this <dfn>rendering</dfn> process, which in this context
+    implies getting a text file and then interpreting it with the
+    <dfn>markup</dfn> (styling) rules such as the color of a title. Basically,
+    we will use the web browser (that you have this webpage open on) in order to
+    see our creations!
+</p>
+
+<h3>An IDE</h3>
+
+<p>
+    As the abbreviation suggests, an <dfn>IDE</dfn> (Integrated Development
+    Environment) is a development environment. We have previously mentioned that
+    we will be writing our code as a text file. In theory, nothing stops you
+    from writing your code in a Notepad file. Before you go ahead and do that
+    though, I should emphasize that it's a horrible idea.
+</p>
+
+<p>
+    An IDE supports much more than typing. The advantages depend on which IDE
+    you are using, but pretty much all IDEs support some autocompletion.
+    Programming usually require a lot of characters that we do not use often in
+    our day-to-day texting. For instance HTML, a markup language we will discuss
+    very soon, relies heavily on the less than (&lt;) and greater than (&gt;)
+    symbols. When you have some styling in your code, you will be required to
+    surround all rules with curly brackets ({ }) and end every line with a
+    semicolon (;). Imagine the time you would save just by not having to type
+    these symbols over an over, on top of the autocompletion of words!
+</p>
+
+<p>
+    Because IDEs are designed with programming on mind, they of course offer
+    much more than autocompletion too. The one that is the most important to me
+    are the <b>syntax highlighting</b>. That is just a fancy term for giving a
+    different color to each word depending on its purpose. As a side effect,
+    this function warns you about typos and incorrect usage of things before you
+    even complete your code. A pre-emptive warning for such errors is a
+    timesaver when the time comes to go back to your code and fixing issues.
+</p>
+
+<p>
+    Not only that, most IDEs are <b>customizable</b>. You could add more and
+    more automation to your work environment depending on your needs. For
+    example, I have an <b>extension</b>, or an extra feature on my IDE that
+    automatically formats my code based on standards and conventions every time
+    I save a file. Isn't that amazing not to worry about small things and focus
+    solely on the code?
+</p>
+
+<div class="icontext">
+    <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+    <p class="text">
+        For this guide, I will be using <b>VS Code</b> (short for Visual Studio
+        Code). It is free, supported by major operating systems (Windows, iOS
+        and Linux) and easy to navigate. It is also fairly customizable.
+        <br /><br />
+        <button
+            id="download"
+            class="button-lg"
+            onclick="window.open('https://code.visualstudio.com/download', '_blank')"
+        >
+            Download VS Code
+        </button>
+    </p>
+</div>
+
+<h3>That's it!</h3>
+
+<p>You are now ready to start!</p>
 
 <ul>
-    <li>This is a list item</li>
-    <li>Here comes another one</li>
-    <li>Very convenient, isn't it?</li>
+    <li>
+        If you are using <b>VS Code</b>, you can continue with this lesson. I
+        will show how to set it up and how to navigate.
+    </li>
+    <li>
+        If you are <b>not</b> using VS Code, feel free to skip the rest of this
+        lesson. I will be covering the topics that are applicable to all IDEs in
+        the next lesson instead. Sadly, the examples and screenshots I will
+        provide in this guide will be from VS Code, so there may be minor
+        differences. This should not create any issues functionally though!
+    </li>
 </ul>
 
-<hr />
+<h2>Setting up VS Code</h2>
 
-<h3>Another title</h3>
-
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit tellus
-    non luctus maximus. Etiam a ultrices turpis. Fusce sodales dignissim ligula
-    eget vehicula. Proin semper ipsum vel iaculis imperdiet. Maecenas ornare
-    eros eu blandit molestie. Ut felis augue, tempor non maximus sit amet,
-    pharetra a est. Quisque in lectus malesuada dolor facilisis blandit.
-    Curabitur consequat lacus ac est vestibulum, eu laoreet purus ornare. Donec
-    ut metus orci. Suspendisse nec metus risus. Donec pharetra elementum congue.
-</p>
-
-<div class="icontext">
-    <div class="icon"><i class="fa-solid fa-code"></i></div>
-    <code>
-        <pre>
-<b>&lt;p&gt;</b>Hello world!<b>&lt;/p&gt;</b>
-</pre>
-    </code>
-</div>
-
-<h2>More things</h2>
-
-<h3>Who reads these really</h3>
+<h3>TODO</h3>
 
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in consequat
-    libero, eget sollicitudin neque. In dolor risus, gravida quis luctus eu,
-    facilisis eu lorem. Pellentesque urna elit, fermentum ac accumsan nec,
-    tincidunt et est. Suspendisse potenti. Vivamus in felis ac ex eleifend
-    sollicitudin et convallis magna. Vestibulum ante ipsum primis in faucibus
-    orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames
-    ac ante ipsum primis in faucibus. Etiam diam augue, volutpat in felis a,
-    mollis pellentesque neque. Duis consequat malesuada interdum. Integer ut
-    varius lectus.
+    Sadly I have not finished this section yet. Don't worry, I am actively
+    writing these posts and it should not take too long before it's complete. If
+    you can't wait to start, the installation is pretty straightforward! You can
+    try it on your own and ask me if you have any have questions!
 </p>
-
-<div class="icontext">
-    <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
-    <p class="text">
-        This is a <b>very</b> insightful comment. I am more curious about how
-        this thing behaves when there are multiple lines. So what if I put here
-        a couple sentences and check it out? I believe it works well. Phew!
-        <br /><br />
-        Even multiple paragraphs. Incredible!
-    </p>
-</div>
-
-<h2>Experiments</h2>
-
-<div class="icontext">
-    <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
-    <p class="text">
-        Putting this to the real test today. What if I had multiple columns? Not
-        really sure about the use case here but maybe I can list things on the
-        other column?
-    </p>
-    <ul class="text">
-        <li>I can list things</li>
-        <li>Not sure what else</li>
-        <li>Maybe I can put an image or something</li>
-        <li>Endless possibilities...</li>
-        <li>Look at me go!</li>
-    </ul>
-</div>
